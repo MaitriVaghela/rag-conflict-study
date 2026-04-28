@@ -57,10 +57,8 @@ for q in questions:
         "id": q["id"],
         "question": q["question"],
         "correct_answer": q["correct_answer"],
-        "response_correct_first": r_correct_first.content,
-        "response_wrong_first": r_wrong_first.content,
-        "correct_first_is_correct": "",
-        "wrong_first_is_correct": ""
+        "model_response_correct_first": r_correct_first.content,
+        "model_response_wrong_first": r_wrong_first.content
     })
 
     print(f"Done: {q['id']}")
