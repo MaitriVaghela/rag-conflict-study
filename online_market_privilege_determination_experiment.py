@@ -1,4 +1,5 @@
 import os
+import json
 import subprocess
 import sys
 
@@ -9,17 +10,8 @@ import pandas as pd
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 
-# TODO: create a training dataset with more questions and variations in the order of the documents to test the model's sensitivity to document order and its ability to identify the correct information.
-
-# training data
-# temperature=0 so the model gives consistent, deterministic answers.
-questions = [{
-    "id": "privilgeDetermination_001",
-    "question": "Can a user with 7 purchases on their account combine shipments?",
-    "doc_correct": "Users must have completed at least 10 purchases to be eligible for combined shipping.",
-    "doc_wrong": "Users must have completed at least 5 purchases to be eligible for combined shipping.",
-    "correct_answer": "No"
-}]
+with open("online_market_privilege_determination_questions.json") as f:
+    questions = json.load(f)
 
 
 # setting up model and prompt
@@ -39,17 +31,16 @@ def is_correct(response, correct_answer):
 
 results = []
 
+# experiment with the order of the documents to see if it affects the model's answer.
 for q in questions:
     print(f"Running test: {q['id']}")
 
-    # first the prompt fills in the placeholders, then the model generates a response.
     r_correct_first = (prompt | llm).invoke({
         "doc1": q["doc_correct"],
         "doc2": q["doc_wrong"],
         "question": q["question"]
         })
 
-    # experiment with the order of the documents to see if it affects the model's answer.
     r_wrong_first = (prompt | llm).invoke({
         "doc1": q["doc_wrong"],
         "doc2": q["doc_correct"],
@@ -70,12 +61,12 @@ for q in questions:
 
 df = pd.DataFrame(results)
 
-df.to_csv("experiment_results.csv", index=False)
+df.to_csv("online_market_privilege_determination_experiment_results.csv", index=False)
 
 # execute the analysis notebook to generate results and visualizations based on the experiment results.
-subprocess.run([sys.executable, "-m", "nbconvert", "--to", "notebook", "--execute", "--inplace", "analysis.ipynb"])
+subprocess.run([sys.executable, "-m", "nbconvert", "--to", "notebook", "--execute", "--inplace", "online_market_privilege_determination_analysis.ipynb"])
 
-print("Experiment completed. Results saved to experiment_results.csv")
+print("Experiment completed. Results saved to online_market_privilege_determination_experiment_results.csv")
 
 
 

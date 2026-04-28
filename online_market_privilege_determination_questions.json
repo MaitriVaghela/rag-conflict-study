@@ -1,0 +1,107 @@
+[{
+    "id": "online_market_privilege_determination_001",
+    "question": "Can a user with 7 purchases on their account combine shipments?",
+    "doc_correct": "Users must have completed at least 10 purchases to be eligible for combined shipping.",
+    "doc_wrong": "Users must have completed at least 5 purchases to be eligible for combined shipping.",
+    "correct_answer": "No"
+},
+{
+    "id": "online_market_privilege_determination_002",
+    "question": "Is a user with 90 days of account age eligible to bid on restricted items?",
+    "doc_correct": "Users must have an account age of at least 180 days to bid on restricted items.",
+    "doc_wrong": "Users must have an account age of at least 60 days to bid on restricted items.",
+    "correct_answer": "No"
+},
+{
+    "id": "online_market_privilege_determination_003",
+    "question": "Can a user with a seller rating of 12 access bulk listing tools?",
+    "doc_correct": "A minimum seller rating of 25 is required to access bulk listing tools.",
+    "doc_wrong": "A minimum seller rating of 10 is required to access bulk listing tools.",
+    "correct_answer": "No"
+},
+{
+    "id": "online_market_privilege_determination_004",
+    "question": "Is a user with 3 disputes in the last 6 months allowed to use fixed-price listings?",
+    "doc_correct": "Users with more than 2 disputes in the last 6 months are not allowed to use fixed-price listings.",
+    "doc_wrong": "Users with more than 4 disputes in the last 6 months are not allowed to use fixed-price listings.",
+    "correct_answer": "No"
+},
+{
+    "id": "online_market_privilege_determination_005",
+    "question": "Can a user who joined 40 days ago leave seller feedback?",
+    "doc_correct": "Users must have an account age of at least 30 days to leave seller feedback.",
+    "doc_wrong": "Users must have an account age of at least 60 days to leave seller feedback.",
+    "correct_answer": "Yes"
+},
+
+{
+    "id": "online_market_privilege_determination_006",
+    "question": "Can an unverified user with 20 purchases combine shipments?",
+    "doc_correct": "Users must have a verified account and at least 10 purchases to combine shipments.",
+    "doc_wrong": "Users must have at least 10 purchases to combine shipments. Account verification is not required.",
+    "correct_answer": "No"
+},
+{
+    "id": "online_market_privilege_determination_007",
+    "question": "Is a verified user with a suspended payment method eligible for express checkout?",
+    "doc_correct": "Users must have a verified account and an active payment method to use express checkout.",
+    "doc_wrong": "Users must have a verified account to use express checkout.",
+    "correct_answer": "No"
+},
+{
+    "id": "online_market_privilege_determination_008",
+    "question": "Can a user with a verified account but no purchase history bid on high-value items?",
+    "doc_correct": "Bidding on high-value items requires a verified account and at least 5 completed purchases.",
+    "doc_wrong": "Bidding on high-value items requires only a verified account.",
+    "correct_answer": "No"
+},
+{
+    "id": "online_market_privilege_determination_009",
+    "question": "Is a user with an unverified email but 15 purchases allowed to sell internationally?",
+    "doc_correct": "International selling requires a verified email address and at least 10 completed purchases.",
+    "doc_wrong": "International selling requires at least 10 completed purchases.",
+    "correct_answer": "No"
+},
+{
+    "id": "online_market_privilege_determination_010",
+    "question": "Can a user with a verified account, 20 purchases, and no disputes access sponsored listings?",
+    "doc_correct": "Sponsored listings are available to users with a verified account, at least 10 purchases, and no open disputes.",
+    "doc_wrong": "Sponsored listings are available to users with at least 10 purchases and no open disputes.",
+    "correct_answer": "Yes"
+},
+
+{
+    "id": "online_market_privilege_determination_011",
+    "question": "Can a standard user download transaction reports in bulk?",
+    "doc_correct": "Bulk transaction report downloads are restricted to premium Seller accounts only.",
+    "doc_wrong": "Bulk transaction report downloads are available to all registered users.",
+    "correct_answer": "No"
+},
+{
+    "id": "online_market_privilege_determination_012",
+    "question": "Is a buyer with no seller history allowed to create a storefront?",
+    "doc_correct": "Creating a storefront requires at least 1 completed sale as a seller.",
+    "doc_wrong": "Any registered user can create a storefront regardless of seller history.",
+    "correct_answer": "No"
+},
+{
+    "id": "online_market_privilege_determination_013",
+    "question": "Can a user with a 30-day-old account and 8 purchases use the backup buyer offer feature?",
+    "doc_correct": "The backup buyer offer feature requires an account age of at least 90 days and 10 completed purchases.",
+    "doc_wrong": "The backup buyer offer feature requires an account age of at least 30 days and 5 completed purchases.",
+    "correct_answer": "No"
+},
+{
+    "id": "online_market_privilege_determination_014",
+    "question": "Is a user eligible for fee discounts if they have been a member for 2 years but have a feedback score of 8?",
+    "doc_correct": "Fee discounts require a membership of at least 1 year and a feedback score of at least 20.",
+    "doc_wrong": "Fee discounts require a membership of at least 2 years and a feedback score of at least 5.",
+    "correct_answer": "No"
+},
+{
+    "id": "online_market_privilege_determination_015",
+    "question": "Can a user with a verified account, 2-year membership, and feedback score of 30 access early sale promotions?",
+    "doc_correct": "Early sale promotions require a verified account, at least 1 year of membership, and a feedback score of 25 or more.",
+    "doc_wrong": "Early sale promotions require a verified account and at least 3 years of membership.",
+    "correct_answer": "Yes"
+}]

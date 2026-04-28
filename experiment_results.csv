@@ -1,2 +1,0 @@
-id,question,correct_answer,model_response_correct_first,model_response_wrong_first,correct_doc_first_accuracy,wrong_doc_first_accuracy
-privilgeDetermination_001,Can a user with 7 purchases on their account combine shipments?,No,"No, a user with 7 purchases cannot combine shipments because they do not meet the minimum requirement of 10 purchases as stated in Document 1.","No, a user with 7 purchases cannot combine shipments because the requirement is to have completed at least 10 purchases.",True,True
